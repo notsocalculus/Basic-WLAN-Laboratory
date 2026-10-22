@@ -15,6 +15,12 @@ Investigate the network boundary between a local Wi-Fi network (WLAN) and an ext
 3. Attempt to access the server from a remote VPS to investigate the limits of private IP addressing and inbound connectivity across the internet. You can also try accessing the server from external network, not within the LAN/WLAN.
 4. Compare the observed results and identify the roles of routing, NAT, firewall rules, and port forwarding.
 
+## Instruction
+1. Run the server on any of the devices in WLAN/LAN
+2. After server is established, access the web server from any devices in the same network. Note that localhost and 127.0.0.1 are your own machine's address itself. You need to get IPv4 from the server and access it through the port 3000. The format is simply [IPv4]:[PORT]
+3. Devices in the WLAN/LAN should be able to access through the web server. If not, check if the port 3000 is blocked by firewall.
+4. Test devices in external network (not in the same LAN as the server) to confirm that web server can be accessed directly from devices in the same LAN/WLAN only.
+
 ## Learning Outcomes
 
 Understand the difference between local and remote network reachability, private and public IP addressing, listening ports, HTTP request-response behavior, and the effect of network boundaries on server accessibility.
